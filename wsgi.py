@@ -12,7 +12,7 @@ def test():
     return "Yipee !! this host is %s" % socket.gethostname()
 
 @application.route("/load")
-def test():
+def load():
     html = socket.gethostname()
     for i in 5000:
       html += "\n<BR>%d" % i
