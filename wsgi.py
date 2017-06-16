@@ -1,5 +1,6 @@
 from flask import Flask
 import socket
+import time
 
 application = Flask(__name__)
 
@@ -10,6 +11,13 @@ def hello():
 @application.route("/hostname")
 def hostname():
     return "Yipee !! this host is %s" % socket.gethostname()
+
+@application.route("/load")
+def load():
+    t = time.time()
+    while time.time() -t < 2:
+        pass
+    return "CPU consuming loop has been running for two seconds"
 
 @application.route("/load")
 def load():
