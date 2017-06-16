@@ -8,7 +8,7 @@ def hello():
     return "Hello World!"
 
 @application.route("/hostname")
-def test():
+def hostname():
     return "Yipee !! this host is %s" % socket.gethostname()
 
 @application.route("/load")
