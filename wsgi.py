@@ -15,9 +15,9 @@ def hostname():
 @application.route("/stress")
 def stress():
     t = time.time()
-    while time.time() -t < 2:
+    while time.time() -t < 10:
         pass
-    return "CPU consuming loop has been running for two seconds"
+    return "CPU consuming loop has been running for 10 seconds"
 
 @application.route("/load")
 def load():
