@@ -12,8 +12,8 @@ def hello():
 def hostname():
     return "Yipee !! this host is %s" % socket.gethostname()
 
-@application.route("/load")
-def load():
+@application.route("/stress")
+def stress():
     t = time.time()
     while time.time() -t < 2:
         pass
